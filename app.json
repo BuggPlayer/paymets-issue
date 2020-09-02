@@ -1,0 +1,12 @@
+{
+  "name": "googlemaptry",
+  "displayName": "googlemaptry",
+  "expo": {
+    "name": "googlemaptry",
+    "slug": "googlemaptry",
+    "version": "1.0.0",
+    "assetBundlePatterns": [
+      "**/*"
+    ]
+  }
+}
