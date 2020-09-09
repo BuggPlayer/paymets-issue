@@ -1,21 +1,28 @@
-import { StatusBar } from 'expo-status-bar';
-import React from 'react';
-import { StyleSheet, Text, View } from 'react-native';
+import * as React from "react";
+
+import { Provider } from "react-redux";
+// import navigation from "./config/navigation";
+import { Navigator } from "./navigation/navigator";
+import { store } from "./Redux/store";
+//import { store } from "./store";
+import { LoginScreen } from "./Screens/LoginScreen";
+ import firebase from "@react-native-firebase/app";//get database from firebase
+ import Auth from "@react-native-firebase/auth";
+import { firebaseConfig } from "./Fire";
+
+//   firebase.initializeApp(firebaseConfig);
+
+
+//  export { firebase,Auth };
+import { AppLoading } from 'expo';
+import * as Font from 'expo-font';
 
 export default function App() {
+ 
   return (
-    <View style={styles.container}>
-      <Text>Open up App.js to start working on your app!</Text>
-      <StatusBar style="auto" />
-    </View>
+    <Provider store={store}>
+    <Navigator />
+  </Provider>
   );
 }
 
-const styles = StyleSheet.create({
-  container: {
-    flex: 1,
-    backgroundColor: '#fff',
-    alignItems: 'center',
-    justifyContent: 'center',
-  },
-});

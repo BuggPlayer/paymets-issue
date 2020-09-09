@@ -3,7 +3,7 @@ package com.googlemaptry;
 import android.app.Application;
 import android.content.Context;
 import android.net.Uri;
-
+import com.razorpay.rn.RazorpayPackage;// imported
 import com.facebook.react.PackageList;
 import com.facebook.react.ReactApplication;
 import com.facebook.react.ReactInstanceManager;
@@ -43,6 +43,8 @@ public class MainApplication extends Application implements ReactApplication {
     protected List<ReactPackage> getPackages() {
       List<ReactPackage> packages = new PackageList(this).getPackages();
       packages.add(new ModuleRegistryAdapter(mModuleRegistryProvider));
+      packages.add(new RazorpayPackage());
+
       return packages;
     }
 
